@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meilensteine | justTry</title>
+    <link rel="stylesheet" href="justTryStyle.css">
+    <link rel="shortcut icon" type="image/png" href="icon/Favicon_1x.png">
+</head>
+<body>
+    
+    <nav>
+        <button id="LogoBtn" onclick="window.location.href = 'justTry.html'"><img id="logo" src="icon/Logo_4x.png" alt="Error"></button>
+        
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-prepend" id="basic-addon1">
+                    <span class="fa fa-search"></span>
+                </span>
+              </div>
+              <div class="content">
+                <div class="search-bar">
+                  <input autofocus placeholder="Type to search..." class="form-control" type="text" autocomplete="off" name="search" id="search">
+                  <button id="submitSearch"><img src="icon/magnifier_1x.png" alt="Error"></button>
+                </div>
+              </div>
+
+            <ul class="list-group" id="list"></ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="meilensteine">
+            <table id="meilensteineTable">
+                <tr>
+                  <th>Name</th>
+                  <th>Datum</th>
+                  <th>Info</th>
+                  <th>Bild</th>
+                  <th>Wikipedia</th>
+                </tr>
+                <tr>
+                  
+                  <td>Z3</td>
+                  <td>1941</td>
+                  <td>Der Z3 zuwrde von <b>Konrad Zuse</b> entwickelt. Er bestand aus einer Relais-Gleitkommaarithmetikeinheit (600 Relais) für Addition, Subtraktion, Multiplikation, Division, Quadratwurzel, Dezimal-Dual- und Dual-Dezimal-Umwandlung</td>
+                  <td><img src="img/Z3.png" alt="Error"></td>
+                  <td><button id="Z3" onclick=" window.open('https://de.wikipedia.org/wiki/Zuse_Z3','_blank')">Z3 - Konrad Zuse</button></td>
+
+                </tr>
+                <tr>
+
+                  <td>Xerox Alto</td>
+                  <td>1973</td>
+                  <td>Der Xerox Alto ist die erste Workstation mit einer grafischen Benutzeroberfläche. Sie wurde im Jahr 1973 von dem Forschungszentrum Xerox PARC entwickelt.</td>
+                  <td><img id="Xerox_Alto" src="img/Xerox Alto.jfif" alt="Error"></td>
+                  <td><button id="Z3" onclick=" window.open('https://de.wikipedia.org/wiki/Xerox_Alto','_blank')">Xerox Alto</button></td>
+
+                </tr>
+                <tr>
+
+                  <td>Apple II</td>
+                  <td>1977</td>
+                  <td>Der Applle II wurde von Steve Jobs & SteveWozniak entwickelt. Er gehört zu den ersten 8-Bit-Mikrocomputern und hat zusätzlich 8 freie Steckplätze.</td>
+                  <td><img id="Apple_2" src="img/Apple_2.png" alt="Error"></td>
+                  <td><button id="Z3" onclick=" window.open('https://de.wikipedia.org/wiki/Apple_II','_blank')">Apple II</button></td>
+
+                </tr>
+                <tr>
+
+                  <td>World Wide Web (www)</td>
+                  <td>1989</td>
+                  <td>Das WWW ist ein über das Internet abrufbares System von elektronischen Hypertext-Dokumenten. Es wurde von der Forschungseinrichtung CERN entwickelt</td>
+                  <td><img id="WorldWideWeb" src="img/WorldWideWeb.png" alt="Error"></td>
+                  <td><button id="Z3" onclick=" window.open('https://de.wikipedia.org/wiki/World_Wide_Web','_blank')">World Wide Web (www)</button></td>
+                
+                </tr>
+                <tr>
+
+                  <td>Fortran</td>
+                  <td>1954</td>
+                  <td>Es ist die älteste noch in weitem Gebrauch befindliche Programmierprache. 1954 entwickelte John W. Backus Fortran.</td>
+                  <td><img id="Fortan" src="img/Fortran.png" alt="Error"></td>
+                  <td><button id="Z3" onclick=" window.open('https://de.wikipedia.org/wiki/Fortran','_blank')">World Wide Web (www)</button></td>
+                
+                </tr>
+              </table>
+        </div>
+    </header>
+    
+    <div class="menu">
+        <button onclick="window.location.href = 'justTry.html'" id="buttonNav"><img src="icon/Menu_1.5x.png" alt="Error"></button>
+      </div>
+
+    <footer class="footerBTN">
+        <button onclick="topFunction()" class="meilensteineFooter">
+            <p>Back To Top</p>
+        </button>
+    </footer>
+
+    <script>
+        const btnScrollUpToTop = document.querySelector(".meilensteineFooter");
+
+        window.addEventListener("scroll", scrollFunction);
+
+        function scrollFunction() {
+	        if (window.pageYOffset > 100) {
+	        	btnScrollUpToTop.style.display = "block";
+	        }
+	        else {
+	        	btnScrollUpToTop.style.display = "none";
+	        }
+        }
+
+        btnScrollUpToTop.addEventListener("click", function () {
+        	window.scrollTo({
+        		top: 0,
+        		left: 0,
+        		behavior: "smooth"
+        	});
+        });
+    </script>
+</body>
+</html>

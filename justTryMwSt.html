@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="justTryStyle.css">
+    <link rel="shortcut icon" type="image/png" href="icon/Favicon_1x.png">
+    <title>Mehrwertsteuerrechner | JustTry</title>
+</head>
+<body>
+    <nav>
+        <button id="LogoBtn" onclick="window.location.href = 'justTry.html'"><img id="logo" src="icon/Logo_4x.png" alt="Error"></button>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-prepend" id="basic-addon1">
+                    <span class="fa fa-search"></span>
+                </span>
+              </div>
+              <div class="content">
+                <div class="search-bar">
+                  <input autofocus placeholder="Type to search..." class="form-control" type="text" autocomplete="off" name="search" id="search">
+                  <button id="submitSearch"><img src="icon/magnifier_1x.png" alt="Error"></button>
+                </div>
+              </div>
+            <ul class="list-group" id="list"></ul>
+        </div>
+    </nav>
+
+    <header id="main">
+        <div class="menu">
+          <button id="buttonNav" onclick="MyFunctionNAV()"><img src="icon/Menu_1.5x.png" alt="Error"></button>
+        </div>
+      
+        <div id="circleNav">
+          <button id="circleBtn1Home" onclick="window.location.href= 'justTry.html'">HOME</button>
+          <button id="circleBtn2" onclick="window.location.href= 'justTryMeilensteine.html'">Meilensteine</button>
+          <button id="circleBtn3" onclick="window.location.href= '#'">Text 3</button>
+          <button id="circleBtn4" onclick="window.location.href= '#'">Text 4</button>
+        </div>
+    </header>
+
+    <form name="form1">
+        <div>Nettobetrag: <input type="text" name="Netto_Eingabe"> <br><br></div>
+        <div>Mehrwertsteuersatz
+        7% <input type="Radio" name="Mehrwertsteuersatz_Eingabe" value="7">
+        16% <input type="Radio" name="Mehrwertsteuersatz_Eingabe"
+        value="16"><br><br></div>
+        <div><input type="button" name="" value="Berechne" onclick="BerechneMwSt();">
+        Mehrwertsteuer: <input type="text" name="Mehrwertsteuer_Ausgabe"></div>
+    </form>
+
+<script src="js/justTryJS.js"></script>
+</body>
+</html>

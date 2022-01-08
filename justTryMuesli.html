@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="justTryStyle.css">
+    <link rel="shortcut icon" type="image/png" href="icon/Favicon_1x.png">
+    <title>Mein Müsli | justTry</title>
+</head>
+<body>
+<nav>
+        <button id="LogoBtn" onclick="window.location.href = 'justTry.html'"><img id="logo" src="icon/Logo_4x.png" alt="Error"></button>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-prepend" id="basic-addon1">
+                    <span class="fa fa-search"></span>
+                </span>
+              </div>
+              <div class="content">
+                <div class="search-bar">
+                  <input autofocus placeholder="Type to search..." class="form-control" type="text" autocomplete="off" name="search" id="search">
+                  <button id="submitSearch"><img src="icon/magnifier_1x.png" alt="Error"></button>
+                </div>
+              </div>
+            <ul class="list-group" id="list"></ul>
+        </div>
+</nav>
+
+<header id="main">
+  <div class="menu">
+    <button id="buttonNav" onclick="MyFunctionNAV()"><img src="icon/Menu_1.5x.png" alt="Error"></button>
+  </div>
+
+  <div id="circleNav">
+    <button id="circleBtn1Home" onclick="window.location.href= 'justTry.html'">HOME</button>
+    <button id="circleBtn2" onclick="window.location.href= 'justTryMeilensteine.html'">Meilensteine</button>
+    <button id="circleBtn3" onclick="window.location.href= '#'">Text 3</button>
+    <button id="circleBtn4" onclick="window.location.href= '#'">Text 4</button>
+  </div>
+</header>
+
+  <div id="BackgroundMüsli">
+    <p id="Überschrift">MyMüsli</p>
+    <button id="BackgroundMüsliAusschnitt" onclick= "ScrollDown()"><img src="icon/down-arrow.png" alt="Error"></button> <!--hash in selben dokument-->
+    <button id="RabattInfo" onclick="window.open('Liste.html','_blank')"><span>Info</span></button>
+  </div>
+
+  <div id="add">
+    <div class="card">
+      <div class="front">
+        <img src="icon/Werbebanner_1x.png" alt="Error">
+      </div>
+      <div class="back">
+        <img src="icon/Werbebanner_v2_1x.png" alt="Error">
+      </div>
+    </div>
+  </div>
+
+  <button onclick="ScrolltoTop()" id="ScrollToTopBtn"><img id="BackToTopImg" src="icon/back-to-top.png" alt="Error"></button>
+
+  <form name="form1">
+    <div id="basisDIV">
+      <input type="radio" id="basis" class="basis1" name="basis" value="3.4" onclick="Einkaufsliste() ;"> <!--Tropic-->
+      <input type="radio" id="basis" class="basis2" name="basis" value="3.5" onclick="Einkaufsliste() ;"> <!--Bircher-->
+      <input type="radio" id="basis" class="basis3" name="basis" value="3.6" onclick="Einkaufsliste() ;"><br> <!--Chocolate-->
+    </div>
+
+    <div class="filter">
+        <button class="filterBtn" onclick="window.location.hash='VerfeinerungMove'">
+          <div id="filterVerfeinerungTxt">Verfeinerung</div>
+        </button>
+
+        <button class="filterBtn" onclick="window.location.hash='FruechteMove'">
+          <div id="filterFruechteTxt">Früchte</div>
+        </button>
+
+        <button class="filterBtn" onclick="window.location.hash='NuKMove'">
+          <div id="filterNuKTxt">Nüsse und Kerne</div>
+        </button class="filterBtn">
+
+        <button class="filterBtn" onclick="window.location.hash='ExtrasMove'">
+          <div id="filterExtrasTxt">Extras</div>
+        </button>
+    </div>
+
+    <div class="Verfeinerung" id="VerfeinerungMove">
+      <h1>Verfeinerung</h1>
+      <div class="VerfeinerungDIV">
+        <img src="img/Amaranth.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Amaranth</div>
+        <input type="checkbox" id="VerfeinerungCB1" name="Amaranth" value="0.5" onclick="Einkaufsliste() ;">
+      </div>
+        
+      <div class="VerfeinerungDIV">
+        <img src="img/Dinkel.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Dinkel</div>
+        <input type="checkbox" id="VerfeinerungCB2" name="Dinkel" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="VerfeinerungDIV">
+        <img src="img/Leinsamen.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Leinsamen</div>
+        <input type="checkbox" id="VerfeinerungCB3" name="Leinsamen" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="VerfeinerungDIV">
+        <img src="img/Quinoaflocken.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Quinoaflocken</div>
+        <input type="checkbox" id="VerfeinerungCB4" name="Quinoaflocken" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+    </div>
+
+    <div class="Fruechte" id="FruechteMove">
+      <h1>Früchte</h1>
+      <div class="FruechteDIV">
+        <img src="img/Ananas.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Ananas</div>
+        <input type="checkbox" id="FruechteCB1" name="Ananas" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="FruechteDIV">
+        <img src="img/Apfel.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Apfelstücke</div>
+        <input type="checkbox" id="FruechteCB2" name="Apfelstücke" value="0.65" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="FruechteDIV">
+        <img src="img/Cranberry.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Cranberries</div>
+        <input type="checkbox" id="FruechteCB3" name="Cranberries" value="0.65" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="FruechteDIV">
+        <img src="img/Mango.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Mango</div>
+        <input type="checkbox" id="FruechteCB4" name="Mango" value="0.7" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="FruechteDIV">
+        <img src="img/Gojibeeren.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Gojibeeren</div>
+        <input type="checkbox" id="FruechteCB5" name="Gojibeeren" value="1.1" onclick="Einkaufsliste() ;">
+      </div>
+    </div>
+
+    <div class="NuK" id="NuKMove">
+      <h1>Nüsse und Kerne</h1>
+      <div class="NuKDIV">
+        <img src="img/Cashewkerne.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Cashewkerne</div>
+        <input type="checkbox" id="NuKCB1" name="Cashewkerne" value="0.55" onclick="Einkaufsliste() ;">
+      </div>
+
+        <div class="NuKDIV">
+          <img src="img/Kokoschips.jpg" alt="Error" class="FormImg"><br>
+          <div class="VerfeinerungTxt1">Kokoschips</div>
+          <input type="checkbox" id="NuKCB2" name="Kokoschips" value="0.25" onclick="Einkaufsliste() ;">
+        </div>
+
+          <div class="NuKDIV">
+            <img src="img/Macadamia.jpg" alt="Error" class="FormImg"><br>
+            <div class="VerfeinerungTxt1">Macadamia</div>
+            <input type="checkbox" id="NuKCB3" name="Macadamia" value="0.95" onclick="Einkaufsliste() ;">
+          </div>
+    </div>
+
+    <div class="Extras" id="ExtrasMove">
+      <h1>Extras</h1>
+      <div class="ExtrasDIV">
+        <img src="img/CranberryChocs.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Cranberry-Chocs</div>
+        <input type="checkbox" id="ExtrasCB1" name="CranberryChocs" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="ExtrasDIV">
+        <img src="img/Honigflocken.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Honigflocken</div>
+        <input type="checkbox" id="ExtrasCB2" name="Honigflocken" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="ExtrasDIV">
+        <img src="img/SchokoCrunchy.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Schoko-Crunchy</div>
+        <input type="checkbox" id="ExtrasCB3" name="SchokoCrunchy" value="0.5" onclick="Einkaufsliste() ;">
+      </div>
+
+      <div class="ExtrasDIV">
+        <img src="img/RosinenChocs.jpg" alt="Error" class="FormImg"><br>
+        <div class="VerfeinerungTxt1">Rosinen-Chocs</div>
+        <input type="checkbox" id="ExtrasCB4" name="RosinenChocs" value="0.6" onclick="Einkaufsliste() ;">
+      </div>
+    </div>
+
+    <div id="bezahlen" style="display: none;">
+      <div class="cash" id="cash">
+        <div class="Liste" id="Liste">
+          <p id="TropicListe" style="display: none;">Tropic (3,40€)</p>
+          <p id="BircherListe" style="display: none;">Bircher (3,50€)</p>
+          <p id="ChocolateListe" style="display: none;">Chocolate (3,60€)</p>
+
+          <p id="AmaranthListe" style="display: none;">Amaranth (0,50€)</p>
+          <p id="DinkelListe" style="display: none;">Dinkel (0,60€)</p>
+          <p id="LeinsamenListe" style="display: none;">Leinsamen (0,60€)</p>
+          <p id="QuinoaflockenListe" style="display: none;">Quinoaflocken (0,60€)</p>
+
+          <p id="AnanasListe" style="display: none;">Ananas (0,60€)</p>
+          <p id="ApfelstückeListe" style="display: none;">Apfelstücke (0,65€)</p>
+          <p id="CranberriesListe" style="display: none;">Cranberries (0,65€)</p>
+          <p id="MangoListe" style="display: none;">Mango (0,70€)</p>
+          <p id="GojibeerenListe" style="display: none;">Gojibeeren (1,10€)</p>
+
+          <p id="CashewkerneListe" style="display: none;">Cashewkerne (0,55€)</p>
+          <p id="KokoschipsListe" style="display: none;">Kokoschips (0,25€)</p>
+          <p id="MacadamiaListe" style="display: none;">Macadamia (0,95€)</p>
+
+          <p id="CranberryChocsListe" style="display: none;">Cranberry-Chocs (0,60€)</p>
+          <p id="HonigflockenListe" style="display: none;">Honigflocken (0,60€)</p>
+          <p id="SchokoCrunchyListe" style="display: none;">Schoko-Crunchy (0,50€)</p>
+          <p id="RosinenChocsListe" style="display: none;">Rosinen-Chocs (0,60€)</p><br><br>
+
+          <p id="25Liste" style="display: none;">Rabatt: -15%</p>
+          <p id="50Liste" style="display: none;">Rabatt: -25%</p>
+          <p id="CouponListe" style="display: none;">Coupon: -5%</p>
+          <p id="MwStListe" style="display: none;">MwSt: +19%</p>
+          <p id="VersandkostenListe" style="display: none;">Versandkosten: +2,95€</p>
+        </div>
+        <div class="code">
+          <input type="text" placeholder="Code" id="coupon" name="coupon" style="pointer-events: all;">
+        </div>
+        <div class="Ausgabe"><input type="text" id="Preis_Ausgabe" placeholder="0.00 €" name="Preis_Ausgabe"></div>
+        <input type="button" id="check" value="Berechne" onclick="Berechne() ;">
+      </div>
+    </div>
+  </form>
+
+  <script src="js/justTryJS.js"></script>
+</body>
+</html>
